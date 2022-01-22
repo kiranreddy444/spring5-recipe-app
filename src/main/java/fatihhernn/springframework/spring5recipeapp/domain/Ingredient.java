@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
+@EqualsAndHashCode(of ={"id"} )
 public class Ingredient {
 
     @Id
@@ -29,4 +30,7 @@ public class Ingredient {
         this.uom = uom;
     }
 
+    public Ingredient() {
+
+    }
 }

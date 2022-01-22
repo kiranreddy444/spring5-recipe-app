@@ -5,6 +5,7 @@ import fatihhernn.springframework.spring5recipeapp.domain.UnitOfMeasure;
 import fatihhernn.springframework.spring5recipeapp.repository.CategoryRepository;
 import fatihhernn.springframework.spring5recipeapp.repository.UnitOfMeasureRepository;
 import fatihhernn.springframework.spring5recipeapp.services.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import javax.servlet.http.PushBuilder;
 import java.security.PublicKey;
 import java.util.Optional;
 
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -24,6 +26,7 @@ public class IndexController {
 
     @RequestMapping
     public String getIndexPage(Model model){
+        log.debug("Getting index Page");
         model.addAttribute("recipes",recipeService.getRecipes());
         return "index";
     }

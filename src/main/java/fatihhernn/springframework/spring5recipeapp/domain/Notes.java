@@ -7,6 +7,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@EqualsAndHashCode(of ={"id"} )
 public class Notes {
 
     @Id

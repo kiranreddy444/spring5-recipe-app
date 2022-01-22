@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@EqualsAndHashCode(of ={"id"} )
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
