@@ -12,6 +12,7 @@ import java.util.Set;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.*;
 
 public class RecipeServiceImplTest {
 
@@ -23,7 +24,7 @@ public class RecipeServiceImplTest {
     @Before
     public void setUp(){
 
-        MockitoAnnotations.openMocks(this);
+        initMocks(this);
 
         recipeService=new RecipeServiceImpl(recipeRepository);
 
